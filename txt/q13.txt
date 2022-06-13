@@ -18,26 +18,36 @@ public class q13 {
         // Taking choice
         System.out.println("\nEnter 1 for getting -> Number of numbers begining with 7");
         System.out.println("Enter 2 for getting -> Number of numbers where sum of 1st and last digit is 10");
-        int choise = sc.nextInt();
-        switch (choise) {
+        int choice = sc.nextInt();
+        switch (choice) {
             case 1:
+                int x = 0;
                 for (int i = 0; i < arr.length; i++) {
                     int firstDigit = Integer.parseInt((arr[i] + "").charAt(0) + "");
                     
-                    if (firstDigit == 7)
+                    if (firstDigit == 7) {
                         System.out.println(arr[i]);
+                        x++;
+                    }
                 }
+
+                System.out.println("Count : " + x);
                 break;
             case 2:
+                x = 0;
                 for (int i = 0; i < arr.length; i++) {
                     int firstDigit = Integer.parseInt((arr[i] + "").charAt(0) + "");
                     int lastDigit = arr[i] % 10;
-                    
-                    if (firstDigit + lastDigit == 10)
+
+                    if (firstDigit + lastDigit == 10) {
                         System.out.println(arr[i]);
+                        x++;
+                    }
                 }
+                System.out.println("Count : " + x);
+                break;
             default :
-                System.out.println("Invalid Choise");
+                System.out.println("Invalid Choice");
         }
         
         System.out.println("Program Terminates");
