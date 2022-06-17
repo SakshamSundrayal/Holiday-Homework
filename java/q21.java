@@ -8,20 +8,15 @@ public class q21 {
         String input = sc.nextLine();
         String str = input.toLowerCase();
         
-        String[] words = str.split(" ");
         
-        for (int i = 0; i <  words.length; i++) {
-            int vowelCount = 0;
-            for (int j = 0; j < words[i].length(); j++) {
-                char temp = words[i].charAt(j);
-                if (temp == 'a' || temp == 'e' || temp == 'i' ||
-                    temp == 'o' || temp == 'u') 
-                    vowelCount++;
-            
-        
-                System.out.println("Number of Vowels in "  + words[j] + "  :  " + vowelCount);
-            }
+        int vowelCount = 0;
+        for (int i = 0; i < str.length(); i++) {
+            char temp = str.charAt(i);
+            if (temp == 'a' || temp == 'e' || temp == 'i' ||
+                temp == 'o' || temp == 'u') 
+                vowelCount++;
         }
-
+        
+        System.out.println("Number of Vowels in the sentence : " + vowelCount);
     }
 }
