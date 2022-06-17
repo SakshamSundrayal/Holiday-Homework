@@ -5,7 +5,7 @@ public class q17 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a string :");
-        String str = sc.nextLine().toUpperCase();
+        String str = sc.nextLine().toLowerCase();
         int length = str.length();
 
         String sortedStr = ""; //Empty String
